@@ -59,7 +59,7 @@ namespace CoinCounter.Tests
             int value = 3; //value in cents
             Amount newAmount = new Amount(value);
             int result = newAmount.NumberToPennies(value);
-            Assert.AreEqual(value, result);
+            Assert.AreEqual(value, result);  
         }
     }
 }
