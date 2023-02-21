@@ -46,13 +46,20 @@ namespace CoinCounter.Tests
 
         }
        [TestMethod]
-        public void NumberToNicketToDivide_DivideInstanceByIncrementAmount_Remainder() 
+        public void NumberToNickelToDivide_DivideInstanceByIncrementAmount_Remainder() 
         {
             int value = 24; //value in cents 
             Amount newAmount = new Amount(value);
             int result = newAmount.NumberToNickelToDivide(value);
             Assert.AreEqual(value % 5, result);
-            
+        }
+        [TestMethod]
+        public void NumberToPennies_ReturnFinalInstanceAsPennies_RemainderOfCentsToPenny()
+        {
+            int value = 3; //value in cents
+            Amount newAmount = new Amount(value);
+            int result = newAmount.NumberToPennies(value);
+            Assert.AreEqual(value, result);
         }
     }
 }
